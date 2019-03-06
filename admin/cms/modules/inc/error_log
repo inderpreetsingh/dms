@@ -1,0 +1,2 @@
+[22-Dec-2018 10:04:09 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting ',' or ';' in /home/techorion/public_html/techorion.in/dms2/admin/cms/modules/inc/add_data.php on line 20
+[22-Dec-2018 10:04:10 UTC] PHP Parse error:  syntax error, unexpected 'die' (T_EXIT), expecting ',' or ';' in /home/techorion/public_html/techorion.in/dms2/admin/cms/modules/inc/add_data.php on line 20

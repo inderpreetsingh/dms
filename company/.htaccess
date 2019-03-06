@@ -1,0 +1,96 @@
+RewriteEngine On    # Turn on the rewriting engine
+
+
+
+RewriteRule    ^index/?$    index.php    [NC,L] 
+RewriteRule    ^i/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    index.php?ref=$1&link=$2     [NC,L] 
+RewriteRule    ^login/?$    login.php    [NC,L] 
+
+
+
+RewriteRule    ^dashboard/?$    modules/dashboard.php    [NC,L]  
+RewriteRule    ^dashboard/([A-Za-z0-9-]+)/?$    modules/dashboard.php?ref=$1   [NC,L]  
+RewriteRule    ^dashboard/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   modules/dashboard.php?ref=$1&link=$2    [NC,L]
+RewriteRule    ^dashboard/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   modules/dashboard.php?ref=$1&link=$2&id=$3    [NC,L]
+
+
+
+RewriteRule    ^signout/?$    modules/inc/signout.php    [NC,L] 
+RewriteRule    ^category/?$    modules/category.php    [NC,L]
+
+RewriteRule    ^subcategory/?$    modules/subCategory.php    [NC,L]
+RewriteRule    ^add-subcategory/?$    modules/add_subcat.php    [NC,L] 
+
+RewriteRule    ^update-subcategory/([A-Za-z0-9-]+)/?$    modules/update-subcategory.php?ref=$1    [NC,L] 
+
+
+
+RewriteRule    ^category/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   modules/category.php?ref=$1&link=$2    [NC,L]  
+
+RewriteRule    ^subcategory/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$   modules/subcategory.php?ref=$1&link=$2    [NC,L]  
+
+
+RewriteRule    ^update-category/([A-Za-z0-9-]+)/?$    modules/update-category.php?ref=$1    [NC,L]  
+RewriteRule    ^add-category/?$    modules/add_cat.php    [NC,L]  
+RewriteRule    ^api/([A-Za-z0-9-]+)/?$    api.php?ref=$1    [NC,L]    
+
+
+RewriteRule    ^attributes/?$    modules/attributes.php    [NC,L]
+RewriteRule    ^add-attribute/?$    modules/add-attributes.php    [NC,L] 
+
+RewriteRule    ^update-attribute/([A-Za-z0-9-]+)/?$    modules/update-attributes.php?ref=$1    [NC,L] 
+RewriteRule    ^attributes/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/attributes.php?ref=$1&link=$2    [NC,L]
+
+RewriteRule    ^add-user/?$    modules/add-user.php    [NC,L] 
+
+RewriteRule    ^products/?$    modules/products.php    [NC,L] 
+RewriteRule	   ^add-product/?$  modules/add_product.php    [NC,L] 
+RewriteRule    ^update-product/([A-Za-z0-9-]+)/?$    modules/update-product.php?ref=$1    [NC,L] 
+RewriteRule    ^products/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/products.php?ref=$1&link=$2    [NC,L]
+
+RewriteRule    ^measurement/?$    modules/measurement.php    [NC,L] 
+RewriteRule    ^add-measurement/?$    modules/add-measurement.php    [NC,L]
+RewriteRule    ^update-measurement/([A-Za-z0-9-]+)/?$    modules/update-measurement.php?ref=$1    [NC,L] 
+RewriteRule    ^measurement/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/measurement.php?ref=$1&link=$2     [NC,L] 
+RewriteRule    ^view-measurement/([A-Za-z0-9-]+)/?$    modules/view-measurement.php?ref=$1    [NC,L] 
+
+RewriteRule    ^workshopmaster/?$    modules/workshopmaster.php    [NC,L] 
+RewriteRule    ^workshopmaster/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/workshopmaster.php?ref=$1&link=$2    [NC,L]
+RewriteRule    ^settings/?$    modules/settings.php    [NC,L] 
+RewriteRule    ^customermaster/?$    modules/customermaster.php  [NC,L]
+RewriteRule    ^customermaster/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/customermaster.php?ref=$1&link=$2 [NC,L]
+
+RewriteRule    ^brands/?$    modules/brands.php  [NC,L]
+RewriteRule    ^add-brandname/?$    modules/add-brandname.php   [NC,L]
+RewriteRule    ^brands/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/brands.php?ref=$1&link=$2    [NC,L]
+RewriteRule    ^update-brandname/([A-Za-z0-9-]+)/?$    modules/update-brandname.php?ref=$1   [NC,L]
+
+
+RewriteRule    ^stocks/?$    modules/stock.php  [NC,L]
+RewriteRule    ^add-stock/?$    modules/add-stock.php   [NC,L]
+RewriteRule    ^stocks/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/stock.php?ref=$1&link=$2    [NC,L]
+
+RewriteRule    ^update-stock/([A-Za-z0-9-]+)/?$    modules/updatestock.php?ref=$1   [NC,L]
+
+RewriteRule    ^designmodule/?$    modules/designmodule.php  [NC,L]
+RewriteRule    ^add-design/?$    modules/add_designmodule.php   [NC,L]
+RewriteRule    ^update-design/([A-Za-z0-9-]+)/?$    modules/updatedesign.php?ref=$1   [NC,L]
+RewriteRule    ^designmodule/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/designmodule.php?ref=$1&link=$2  [NC,L]
+
+
+
+RewriteRule    ^typemodule/?$    modules/typemodule.php  [NC,L]
+RewriteRule    ^add-typemodule/?$    modules/add-typemodule.php   [NC,L]
+RewriteRule    ^update-type/([A-Za-z0-9-]+)/?$    modules/updatetype.php?ref=$1   [NC,L]
+RewriteRule    ^typemodule/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    modules/typemodule.php?ref=$1&link=$2  [NC,L]
+
+RewriteRule    ^receipt/([A-Za-z0-9-]+)/?$    modules/printable_measurement.php?ref=$1  [NC,L]
+
+RewriteRule    ^daily-report/?$    modules/daily-report.php  [NC,L]
+RewriteRule    ^report/?$    modules/find.php  [NC,L]
+
+RewriteRule    ^report/?$    modules/find.php  [NC,L]
+RewriteRule	   ^orders/?$	 modules/completeorders.php  [NC,L]
+RewriteRule	   ^custom-report/?$  modules/customreport.php  [NC,L]
+RewriteRule	   ^daywise-report/?$  modules/daywisereport.php  [NC,L]
+RewriteRule	   ^profile/?$  modules/profile.php  [NC,L]
